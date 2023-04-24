@@ -12,7 +12,7 @@ Catch {
 
 # Navigate website
 try {
-    $driver.Navigate().GoToUrl("https://www.astonberkeley.com")
+    $driver.Navigate().GoToUrl("https://www.example.com")
 }
 catch {
     Write-Host "Error navigating website: $_"
@@ -62,7 +62,6 @@ catch {
 
 # Check search results
 try{
-
     $searchResults = $driver.FindElementByName("search-results")
     if ($searchResults.Displayed) {
         Write-Host "Search results found"
@@ -70,10 +69,10 @@ try{
         Write-Host "Search results not found"
     }
 }
-
 catch {
-    Write-Host "Error checkin search results: $_"
+    Write-Host "Error checking search results: $_"
 }
+
 # Close web driver
 $driver.Close()
 
