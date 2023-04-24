@@ -24,6 +24,8 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 ## Errors
 
+### 24/04/2023 ###
+
 - It looks like there are several issues with the code. The first error message suggests that the version of the ChromeDriver being used does not support the version of Chrome installed on the system. You may need to download and install the correct version of ChromeDriver for your version of Chrome.
 
 - The subsequent error messages indicate that the web driver object is null and cannot be used to perform actions on the webpage. This could be due to an issue with the ChromeDriver installation, or with the way the web driver object is being initialized and used in the code.
@@ -32,7 +34,11 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - Overall, it may be helpful to troubleshoot the issues one by one, starting with the ChromeDriver installation and initialization, and then moving on to the specific actions being performed on the webpage.
 
+- Error starting web driver : Exception calling ".ctor" with "2" argument(s): "session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)"
+
 ## Fixes To-do
+
+### 24/04/2023 ###
 
 1. Check the version of Chrome installed on your system, and download and install the corresponding version of ChromeDriver from the official website.
 
@@ -43,5 +49,7 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 4. Try using different methods for locating and interacting with elements on the page, such as using CSS selectors or XPath expressions.
 
 5. Add error-handling code to catch and handle any exceptions that may be thrown during the execution of the script.
+
+6. 
 
 ## Test images coming soon
