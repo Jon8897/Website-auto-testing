@@ -11,6 +11,8 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 5. Execute tests: Run the tests in the test environment and record the results.
 6. Analyze results: Analyze the test results to determine if the website meets the desired quality standards.
 
+- To run script Invoke-Expression '.\website-tester.ps1'
+
 ## Updates
 
 - Shows errors
@@ -29,5 +31,17 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 - It's also possible that there is an issue with the website being tested, or with the specific elements being accessed in the code. You may need to adjust the code to use different methods for locating and interacting with the elements on the page.
 
 - Overall, it may be helpful to troubleshoot the issues one by one, starting with the ChromeDriver installation and initialization, and then moving on to the specific actions being performed on the webpage.
+
+## Fixes To-do
+
+1. Check the version of Chrome installed on your system, and download and install the corresponding version of ChromeDriver from the official website.
+
+2. Double-check the syntax and formatting of the code to make sure there are no errors or typos that could be causing issues.
+
+3. Verify that the website being tested is functioning correctly, and that the specific elements being accessed in the code are valid and accessible.
+
+4. Try using different methods for locating and interacting with elements on the page, such as using CSS selectors or XPath expressions.
+
+5. Add error-handling code to catch and handle any exceptions that may be thrown during the execution of the script.
 
 ## Test images coming soon
