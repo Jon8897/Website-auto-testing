@@ -38,6 +38,8 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - Overall, it may be helpful to troubleshoot the issues one by one, starting with the ChromeDriver installation and initialization, and then moving on to the specific actions being performed on the webpage.
 
+- GUI not running find fix
+
 
 ## Fixes To-do
 
