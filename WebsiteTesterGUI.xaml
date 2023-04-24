@@ -1,0 +1,21 @@
+# Load GUI from XAML
+Add-Type -AssemblyName PresentationFramework
+
+$xamlFile = "C:\path\to\WebsiteTesterGUI.xaml"
+$stream = New-Object IO.FileStream $xamlFile, [System.IO.FileMode]::Open
+$xamlReader = New-Object System.Windows.Markup.XamlReader
+$window = $xamlReader.Load($stream)
+
+# Get UI elements
+$txtUrl = $window.FindName("txtUrl")
+$btnTestWebsite = $window.FindName("btnTestWebsite")
+
+# Event handlers
+$btnTestWebsite.Add_Click({
+    # Get URL from input
+    $url = $txtUrl.Text
+
+})
+
+# Show GUI
+$window.ShowDialog() | Out-Null
