@@ -5,7 +5,7 @@ Import-Module Selenium
 $driver = Start-SeChrome
 
 # Navigate website
-$driver.Navigate().GoToUrl("https://www.example.com")
+$driver.Navigate().GoToUrl("https://www.astonberkeley.com")
 
 # Find an element on the page  
 $searchBox = $driver.FindElementByName("search")
