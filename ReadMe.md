@@ -13,6 +13,10 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - To run script Invoke-Expression '.\website-tester.ps1'
 
+# Whats does it achieve right now 
+
+- The code is trying to test a website by performing a search query and checking the results. The code initializes a new web driver using Selenium and navigates to a website. It then finds a search box on the page, enters a search query, submits the query, and waits for the search results to load. Finally, it checks whether the search results are displayed and outputs a message indicating whether the results were found or not.
+
 ## Updates
 
 - Shows errors
@@ -34,7 +38,6 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - Overall, it may be helpful to troubleshoot the issues one by one, starting with the ChromeDriver installation and initialization, and then moving on to the specific actions being performed on the webpage.
 
-- Error starting web driver : Exception calling ".ctor" with "2" argument(s): "session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)"
 
 ## Fixes To-do
 
@@ -50,6 +53,16 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 5. Add error-handling code to catch and handle any exceptions that may be thrown during the execution of the script.
 
-6. 
+## Issue
+
+### 24/04/2023 ###
+
+- Error starting web driver : Exception calling ".ctor" with "2" argument(s): "session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)"
+
+    - Resolution:
+        1. Determine the version of Chrome you have installed. You can find this information by opening Chrome and navigating to the "Help" menu > "About Google Chrome".
+        2. Download the corresponding version of ChromeDriver from the official website: https://chromedriver.chromium.org/downloads.
+        3. Replace the existing version of ChromeDriver with the newly downloaded version in your script or environment. Make sure to update the path to the ChromeDriver executable in your code if necessary.
+        4. Re-run your script and confirm that the error has been resolved.
 
 ## Test images coming soon
