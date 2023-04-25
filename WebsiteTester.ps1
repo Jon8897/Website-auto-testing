@@ -3,7 +3,9 @@ Import-Module Selenium
 
 # Start new web driver
 try {
-    $driver = Start-SeChrome
+    $chromeOptions = New-Object OpenQA.Selenium.Chrome.ChromeOptions
+    $chromeOptions.AcceptInsecureCertificates = $true
+    $driver = Start-SeChrome -ChromeOptions $chromeOptions
 }
 Catch {
     Write-Host "Error starting web driver : $_"
@@ -75,4 +77,3 @@ catch {
 
 # Close web driver
 $driver.Close()
-
