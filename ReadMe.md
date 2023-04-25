@@ -40,6 +40,17 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - GUI not running find fix
 
+### 25/04/2023 ###
+
+- The first error is caused by the script attempting to convert a value to a type that is incompatible. Specifically, it is trying to convert "[System.IO.FileMode]::Open" to the "System.IO.FileMode" type, but it cannot match it to a valid enumerator name.
+
+- The second error is stating that the method "Load" does not exist in the "System.Windows.Markup.XamlReader" class.
+
+- The third, fourth and fifth errors are all caused by the variable "$window" being null. This means that the script is unable to find the XAML window and is therefore unable to retrieve the UI elements.
+
+- The final error is also caused by the null variable "$window". The script is trying to call the "ShowDialog()" method on this null variable, which is causing an error.
+
+- Error with loading chrome drive
 
 ## Fixes To-do
 
@@ -54,6 +65,26 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 4. Try using different methods for locating and interacting with elements on the page, such as using CSS selectors or XPath expressions.
 
 5. Add error-handling code to catch and handle any exceptions that may be thrown during the execution of the script.
+
+### 25/04/2023 ###
+
+1. The first error is because PowerShell is unable to convert the string "[System.IO.FileMode]::Open" to the type "System.IO.FileMode". You can try using the value "Open" directly, like this:
+
+<pre>
+$stream = New-Object IO.FileStream $xamlFile, Open, Read
+</pre>
+
+2. The second error is because the XamlReader object does not have a method called "Load". This is likely because you are using an older version of .NET. You can try using the "LoadXml" method instead:
+
+<pre>
+$xaml = Get-Content $xamlFile -Raw
+$stream = New-Object IO.MemoryStream([System.Text.Encoding]::UTF8.GetBytes($xaml))
+$window = $xamlReader.LoadXml($stream)
+</pre>
+
+3. For the remaining errors, it seems that the UI elements are not being found by the script. You should ensure that the XAML file contains elements with the correct names.
+
+4. Update Selenium
 
 ## Issue
 
