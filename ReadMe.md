@@ -1,4 +1,6 @@
-# Auto Website Testing Script
+# UPDATE - Language change to python 
+
+## Auto Website Testing Script
 
 First, let's start with defining the requirements and goals of the automated website tester. What kind of website are you testing? What are the specific scenarios you want to test? What kind of data or feedback do you want to get from the test results?
 
@@ -13,11 +15,11 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - To run script Invoke-Expression '.\website-tester.ps1'
 
-# Whats does it achieve right now 
+## Whats does it achieve right now 
 
 - The code is trying to test a website by performing a search query and checking the results. The code initializes a new web driver using Selenium and navigates to a website. It then finds a search box on the page, enters a search query, submits the query, and waits for the search results to load. Finally, it checks whether the search results are displayed and outputs a message indicating whether the results were found or not.
 
-## Updates
+### Updates
 
 - Shows errors
 - Identify where the errors are in the code 
@@ -26,9 +28,9 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 - Run with a GUI
 - Logs all issues fo a website
 
-## Errors
+### Errors
 
-### 24/04/2023 ###
+#### 24/04/2023 ####
 
 - It looks like there are several issues with the code. The first error message suggests that the version of the ChromeDriver being used does not support the version of Chrome installed on the system. You may need to download and install the correct version of ChromeDriver for your version of Chrome.
 
@@ -40,7 +42,7 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - GUI not running find fix
 
-### 25/04/2023 ###
+#### 25/04/2023 ####
 
 - The first error is caused by the script attempting to convert a value to a type that is incompatible. Specifically, it is trying to convert "[System.IO.FileMode]::Open" to the "System.IO.FileMode" type, but it cannot match it to a valid enumerator name.
 
@@ -52,9 +54,9 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 - Error with loading chrome drive
 
-## Fixes To-do
+### Fixes To-do
 
-### 24/04/2023 ###
+#### 24/04/2023 ####
 
 1. Check the version of Chrome installed on your system, and download and install the corresponding version of ChromeDriver from the official website.
 
@@ -66,7 +68,7 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 5. Add error-handling code to catch and handle any exceptions that may be thrown during the execution of the script.
 
-### 25/04/2023 ###
+#### 25/04/2023 ####
 
 1. The first error is because PowerShell is unable to convert the string "[System.IO.FileMode]::Open" to the type "System.IO.FileMode". You can try using the value "Open" directly, like this:
 
@@ -86,9 +88,9 @@ $window = $xamlReader.LoadXml($stream)
 
 4. Update Selenium
 
-## Issue
+### Issue
 
-### 24/04/2023 ###
+#### 24/04/2023 ####
 
 - Error starting web driver : Exception calling ".ctor" with "2" argument(s): "session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)"
 
