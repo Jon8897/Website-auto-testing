@@ -1,7 +1,7 @@
 # Load GUI from XAML
 Add-Type -AssemblyName PresentationFramework
 
-$xamlFile = "C:\path\to\WebsiteTesterGUI.xaml"
+$xamlFile = "C:\Users\jonathankeefe.ASTONBERKELEY\OneDrive - Aston Berkeley Systems Ltd\Desktop\Projects\git-projects\Website-auto-testing\WebsiteTesterGUI.xaml"
 $stream = New-Object IO.FileStream $xamlFile, [System.IO.FileMode]::Open
 $xamlReader = New-Object System.Windows.Markup.XamlReader
 $window = $xamlReader.Load($stream)
@@ -31,7 +31,7 @@ $btnTestWebsite.Add_Click({
 
     # Navigate website
     try {
-        $driver.Navigate().GoToUrl("https://www.example.com")
+        $driver.Navigate().GoToUrl($url)
     }
     catch {
         Write-Host "Error navigating website: $_"
