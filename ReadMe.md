@@ -13,7 +13,7 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 5. Execute tests: Run the tests in the test environment and record the results.
 6. Analyze results: Analyze the test results to determine if the website meets the desired quality standards.
 
-- To run script Invoke-Expression '.\website-tester.ps1'
+- To run script 
 
 ## Whats does it achieve right now 
 
