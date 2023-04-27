@@ -17,9 +17,6 @@ def browser():
 logging.basicConfig(filename='website-improvements.log', level=logging.INFO,
                     format='%(asctime)s %(levelname)s: %(message)s')
 
-# Define the expected title
-title = ""
-
 # Define the test case that uses the WebDriver fixture
 def test_website(browser, url, title):
     # Navigate to the specified website
