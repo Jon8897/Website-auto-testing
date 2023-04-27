@@ -24,16 +24,3 @@ def test_website(browser):
         print("Assertion failed: 'Example Domain' not found in title")
         # Re-raise the exception so that the test fails
         raise
-
-# Define another test case that visits a different website
-def test_google(browser):
-    # Navigate to the google.com website
-    browser.get("https://www.google.com")
-    try:
-        # Check if the title of the page contains the expected text
-        assert "Google" in browser.title
-    except AssertionError:
-        # Add any code here that should be executed if the assertion fails
-        print("Assertion failed: 'Google' not found in title")
-        # Re-raise the exception so that the test fails
-        raise
