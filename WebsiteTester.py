@@ -17,15 +17,18 @@ def browser():
 logging.basicConfig(filename='website-improvements.log', level=logging.INFO,
                     format='%(asctime)s %(levelname)s: %(message)s')
 
+# Define the expected title
+title = ""
+
 # Define the test case that uses the WebDriver fixture
-def test_website(browser, url):
+def test_website(browser, url, title):
     # Navigate to the specified website
     browser.get(url)
     try:
         # Check if the title of the page contains the expected text
-        assert "Example Domain" in browser.title
+        assert title in browser.title
     except AssertionError:
         # Log the error message to the file
-        logging.error(f"'Example Domain' not found in the title of {url}")
+        logging.error(f"'{title}' not found in the title of {url}")
         # Re-raise the exception so that the test fails
         raise
