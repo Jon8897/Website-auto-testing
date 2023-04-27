@@ -32,7 +32,7 @@ Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`
 
 ## Update Ideas
 
-- Test website title: Check if the website title matches the expected title.
+- ~~Test website title: Check if the website title matches the expected title.~~
 - Test website URL: Check if the website URL matches the expected URL.
 - Test website links: Check if all links on the website are valid and working.
 - Test website images: Check if all images on the website are valid and working.
