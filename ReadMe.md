@@ -36,6 +36,8 @@ Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`
 
 - Log file created (Passed)
 - GUI been create (Pass)
+- Title function (Failed)
+    - Due to a parameter that was set that no longer needed to be there
 
 ## Update Ideas
 
