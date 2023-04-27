@@ -32,8 +32,13 @@ Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`
 
 ## Update Ideas
 
-- Create A GUI with input to make sure friendly website tester
-- Add more functions to test 
-- Being able to test CMS pages
-- Look for bugs in code 
-- Check all functionality of code 
+- Test website title: Check if the website title matches the expected title.
+- Test website URL: Check if the website URL matches the expected URL.
+- Test website links: Check if all links on the website are valid and working.
+- Test website images: Check if all images on the website are valid and working.
+- Test website forms: Check if all forms on the website are working properly and data can be submitted successfully.
+- Test website responsiveness: Check if the website is responsive on different devices and screen sizes.
+- Test website performance: Check if the website is loading fast and efficiently.
+- Test website security: Check if the website has proper security measures in place to protect user data and prevent cyber attacks.
+- Test website accessibility: Check if the website is accessible for people with disabilities and meets accessibility standards.
+- Test website functionality: Test specific website functionality, such as search or shopping cart features, to ensure they are working properly.
