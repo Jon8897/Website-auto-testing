@@ -29,3 +29,11 @@ Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`
 - Removed section of google.com check
 - Added specific url looking 
 - Added a log for improvements
+
+## Update Ideas
+
+- Create A GUI with input to make sure friendly website tester
+- Add more functions to test 
+- Being able to test CMS pages
+- Look for bugs in code 
+- Check all functionality of code 
