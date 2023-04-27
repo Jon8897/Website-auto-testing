@@ -22,13 +22,17 @@ Once we have a clear understanding of the goals and requirements, we can proceed
 
 Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`**, navigates to a website, and makes an assertion to verify that the page title contains the expected text. If the assertion fails, an error message is printed and the test fails.
 
-## Updates Made
+## Testing
 
 ### 27/04/2023 ###
 
-- Removed section of google.com check
-- Added specific url looking 
-- Added a log for improvements
+- Log file 
+
+## Outcome
+
+### 27/04/2023 ###
+
+- Log file created
 
 ## Update Ideas
 
