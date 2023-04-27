@@ -27,12 +27,15 @@ Overall, this code sets up a **`WebDriver`** using **`selenium`** and **`Chrome`
 ### 27/04/2023 ###
 
 - Log file 
+- GUI 
+- Title function
 
 ## Outcome
 
 ### 27/04/2023 ###
 
-- Log file created
+- Log file created (Passed)
+- GUI been create (Pass)
 
 ## Update Ideas
 
