@@ -5,6 +5,8 @@ from selenium import webdriver
 import pytest
 import logging
 import WebsiteTester
+from WebsiteTester import browser
+
 
 class WebsiteTesterGUI:
     def __init__(self, master):
@@ -44,11 +46,12 @@ class WebsiteTesterGUI:
 
         # Test the website and display the result
         try:
-            WebsiteTester.test_website(url, title)
+            WebsiteTester.test_website(browser, url, title)
             messagebox.showinfo("Success", "Website test passed!")
-        except:
-            logging.error(f"An error occurred while testing {url}")
-            messagebox.showerror("Error", "Website test failed. Please check logs for details.")
+        except Exception as e:
+            error_message = str(e)
+            logging.error(f"An error occurred while testing {url}: {error_message}")
+            messagebox.showerror("Error", f"Website test failed. Error: {error_message}.Please check logs for details.")
 
 # Create the GUI window
 root = tk.Tk()
