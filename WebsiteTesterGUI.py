@@ -43,6 +43,9 @@ class WebsiteTesterGUI:
         if not title:
             messagebox.showerror("Error", "Please enter a title")
             return
+        
+        # Create a browser instance
+        browser = webdriver.Chrome()
 
         # Test the website and display the result
         try:
@@ -52,6 +55,9 @@ class WebsiteTesterGUI:
             error_message = str(e)
             logging.error(f"An error occurred while testing {url}: {error_message}")
             messagebox.showerror("Error", f"Website test failed. Error: {error_message}.Please check logs for details.")
+
+        # Close the browser
+        browser.quit()
 
 # Create the GUI window
 root = tk.Tk()
