@@ -7,7 +7,6 @@ import logging
 import WebsiteTester
 from WebsiteTester import browser
 
-
 class WebsiteTesterGUI:
     def __init__(self, master):
         # Set up the GUI window

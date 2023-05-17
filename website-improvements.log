@@ -7,3 +7,20 @@
 2023-05-15 17:13:36,940 ERROR: An error occurred while testing https://www.google.com/: test_website() missing 1 required positional argument: 'title'
 2023-05-15 19:01:25,581 ERROR: An error occurred while testing https://www.google.com/: 'function' object has no attribute 'get'
 2023-05-15 19:04:51,090 ERROR: An error occurred while testing https://www.google.com/: 'function' object has no attribute 'get'
+2023-05-17 20:45:31,713 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-17 20:46:33,576 ERROR: 'google' not found in the title of https://www.google.com/
+2023-05-17 20:46:33,583 ERROR: An error occurred while testing https://www.google.com/: 
+2023-05-17 21:02:25,629 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-17 21:02:38,014 ERROR: 'google' not found in the title of https://www.google.com/
+2023-05-17 21:02:38,017 ERROR: An error occurred while testing https://www.google.com/: 
+2023-05-17 21:12:10,426 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-17 21:12:21,414 INFO: Actual title https://www.google.com/: Google
+2023-05-17 21:12:21,423 ERROR: 'google' not found in the title of https://www.google.com/
+2023-05-17 21:12:21,432 ERROR: Traceback (most recent call last):
+  File "/Users/Jon/Desktop/git-projects/Website-auto-testing/WebsiteTester.py", line 32, in test_website
+    assert title in browser.title
+AssertionError
+
+2023-05-17 21:12:21,432 ERROR: An error occurred while testing https://www.google.com/: 
+2023-05-17 21:12:33,510 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-17 21:12:41,353 INFO: Actual title https://www.google.com/: Google
