@@ -29,6 +29,13 @@ class WebsiteTesterGUI:
         self.test_button = tk.Button(master, text="Test Website", command=self.test_website)
         self.test_button.pack()
 
+        # Add Navigation buttons
+        self.home_button = tk.Button(master, text="Home", command=self.navigate_home)
+        self.home_button.pack()
+
+        self.about_button = tk.Button(master, text="About", command=self.navigate_about)
+        self.about_button.pack()
+
     def test_website(self):
         # Get the URL and Title entered by the user
         url = self.url_entry.get()
