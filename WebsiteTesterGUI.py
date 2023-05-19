@@ -6,6 +6,10 @@ import logging
 import WebsiteTester
 from urllib.parse import urlparse
 
+# Configure logging
+logging.basicConfig(filename='website-improvements.log', level=logging.INFO,
+                    format='%(asctime)s %(levelname)s: %(message)s')
+
 class WebsiteTesterGUI:
     def __init__(self, master):
         # Set up the GUI window
@@ -75,6 +79,9 @@ class WebsiteTesterGUI:
         # Read the URL from the URL entry field 
         url = self.url_entry.get()
 
+        # Log the navigation action
+        logging.info(f"Navigating to Home page with URL: {url}")
+
         # Set the URL and Title entries for the Home page
         self.url_entry.delete(0, tk.END)
         self.url_entry.insert(0, url + "/home")
@@ -84,7 +91,10 @@ class WebsiteTesterGUI:
     def navigate_about(self):
         # Read the URL from the URL entry field 
         url = self.url_entry.get()
-        
+
+        # Log the navigation action
+        logging.info(f"Navigating to Home page with URL: {url}")
+
         # Set the URL and Title entries for the About page
         self.url_entry.delete(0, tk.END)
         self.url_entry.insert(0, url + "/about")
