@@ -5,7 +5,7 @@ from selenium import webdriver
 import pytest
 import logging
 import WebsiteTester
-from WebsiteTester import browser
+from urllib.parse import urlparse
 
 class WebsiteTesterGUI:
     def __init__(self, master):
@@ -52,9 +52,18 @@ class WebsiteTesterGUI:
         if not title:
             messagebox.showerror("Error", "Please enter a title")
             return
+
+        # Check if the URL has a valid format
+        parsed_url = urlparse(url)
+        if not parsed_url.scheme or not parsed_url.netloc:
+            messagebox.showerror("Error", "Invalid URL format")
+            return 
         
-        # Create a browser instance
-        browser = webdriver.Chrome()
+        # 
+        
+        # Create a Chrome WebDriver instance if not already created
+        if not self.browser:
+            self.browser = webdriver.Chrome()
 
         # Test the website and display the result
         try:
@@ -65,8 +74,24 @@ class WebsiteTesterGUI:
             logging.error(f"An error occurred while testing {url}: {error_message}")
             messagebox.showerror("Error", f"Website test failed. Error: {error_message}.Please check logs for details.")
 
-        # Close the browser
-        browser.quit()
+    def navigate_home(self):
+        # Set the URL and Title entries for the Home page
+        self.url_entry.delete(0, tk.END)
+        self.url_entry.insert(0, "https://www.example.com/home")
+        self.title_entry.delete(0, tk.END)
+        self.title_entry.insert(0, "Home Page")
+
+    def navigate_about(self):
+        # Set the URL and Title entries for the About page
+        self.url_entry.delete(0, tk.END)
+        self.url_entry.insert(0, "https://www.example.com/about")
+        self.title_entry.delete(0, tk.END)
+        self.title_entry.insert(0, "About Page")
+
+    def __del__(self):
+        # Close the browser when the GUI is closed
+        If self.browser:
+            self.browser.quit()
 
 # Create the GUI window
 root = tk.Tk()
