@@ -72,16 +72,22 @@ class WebsiteTesterGUI:
             messagebox.showerror("Error", f"Website test failed. Error: {error_message}. Please check logs for details.")
 
     def navigate_home(self):
+        # Read the URL from the URL entry field 
+        url = self.url_entry.get()
+
         # Set the URL and Title entries for the Home page
         self.url_entry.delete(0, tk.END)
-        self.url_entry.insert(0, "https://www.example.com/home")
+        self.url_entry.insert(0, url + "/home")
         self.title_entry.delete(0, tk.END)
         self.title_entry.insert(0, "Home Page")
 
     def navigate_about(self):
+        # Read the URL from the URL entry field 
+        url = self.url_entry.get()
+        
         # Set the URL and Title entries for the About page
         self.url_entry.delete(0, tk.END)
-        self.url_entry.insert(0, "https://www.example.com/about")
+        self.url_entry.insert(0, url + "/about")
         self.title_entry.delete(0, tk.END)
         self.title_entry.insert(0, "About Page")
 

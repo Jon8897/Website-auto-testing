@@ -26,3 +26,12 @@ AssertionError
 2023-05-17 21:12:41,353 INFO: Actual title https://www.google.com/: Google
 2023-05-17 21:22:48,162 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
 2023-05-17 21:22:57,487 INFO: Actual title https://www.google.com/: Google
+2023-05-19 21:22:48,227 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-19 21:23:00,771 INFO: Actual title https://www.astonberkeley.com/: Aston Berkeley - IT Business Solutions
+2023-05-19 21:23:00,875 ERROR: 'Home Page' not found in the title of https://www.astonberkeley.com/
+2023-05-19 21:23:00,889 ERROR: Traceback (most recent call last):
+  File "/Users/Jon/Desktop/git-projects/Website-auto-testing/WebsiteTester.py", line 32, in test_website
+    assert title in browser.title
+AssertionError
+
+2023-05-19 21:23:00,889 ERROR: An error occurred while testing https://www.astonberkeley.com/: 
