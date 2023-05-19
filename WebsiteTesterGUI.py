@@ -2,7 +2,6 @@
 import tkinter as tk
 from tkinter import messagebox
 from selenium import webdriver
-import pytest
 import logging
 import WebsiteTester
 from urllib.parse import urlparse
@@ -37,7 +36,7 @@ class WebsiteTesterGUI:
         self.about_button.pack()
 
         # Create a browser instance
-        self.browser = None 
+        self.browser = None
 
     def test_website(self):
         # Get the URL and Title entered by the user
@@ -57,9 +56,7 @@ class WebsiteTesterGUI:
         parsed_url = urlparse(url)
         if not parsed_url.scheme or not parsed_url.netloc:
             messagebox.showerror("Error", "Invalid URL format")
-            return 
-        
-        # 
+            return
         
         # Create a Chrome WebDriver instance if not already created
         if not self.browser:
@@ -67,12 +64,12 @@ class WebsiteTesterGUI:
 
         # Test the website and display the result
         try:
-            WebsiteTester.test_website(browser, url, title)
+            WebsiteTester.test_website(self.browser, url, title)
             messagebox.showinfo("Success", "Website test passed!")
         except Exception as e:
             error_message = str(e)
             logging.error(f"An error occurred while testing {url}: {error_message}")
-            messagebox.showerror("Error", f"Website test failed. Error: {error_message}.Please check logs for details.")
+            messagebox.showerror("Error", f"Website test failed. Error: {error_message}. Please check logs for details.")
 
     def navigate_home(self):
         # Set the URL and Title entries for the Home page
@@ -90,7 +87,7 @@ class WebsiteTesterGUI:
 
     def __del__(self):
         # Close the browser when the GUI is closed
-        If self.browser:
+        if self.browser:
             self.browser.quit()
 
 # Create the GUI window
