@@ -50,3 +50,7 @@ AssertionError
 AssertionError
 
 2023-05-19 21:42:56,459 ERROR: An error occurred while testing https://www.astonberkeley.com//home/about/home/about/home: 
+2023-05-20 14:04:37,779 INFO: Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-05-20 14:04:51,685 INFO: Actual title https://www.averyproductions.co.uk/: Entertainment | Avery Productions
+2023-05-20 14:05:02,224 INFO: Navigating to Home page with URL: https://www.averyproductions.co.uk/
+2023-05-20 14:05:04,339 INFO: Navigating to Home page with URL: https://www.averyproductions.co.uk//home
