@@ -37,3 +37,35 @@ def test_website(browser, url, title):
         logging.error(traceback.format_exc())
         # Re-raise the exception so that the test fails
         raise
+
+def navigate_home(url_entry, title_entry):
+    try:
+        # Read the URL from the URL entry field 
+        url = url_entry.get()
+
+        # Log the navigation action
+        logging.info(f"Navigating to Home page with URL: {url}")
+
+        # Set the URL and Title entries for the Home page
+        url_entry.delete(0, 'end')
+        url_entry.insert(0, url + "/home")
+        title_entry.delete(0, 'end')
+        title_entry.insert(0, "Home Page")
+    except Exception as e:
+        logging.error(f"An error occurred during navigation to Home page: {str(e)}")
+
+def navigate_about(url_entry, title_entry):
+    try:
+        # Read the URL from the URL entry field 
+        url = url_entry.get()
+
+        # Log the navigation action
+        logging.info(f"Navigating to About page with URL: {url}")
+
+        # Set the URL and Title entries for the About page
+        url_entry.delete(0, 'end')
+        url_entry.insert(0, url + "/about")
+        title_entry.delete(0, 'end')
+        title_entry.insert(0, "About Page")
+    except Exception as e:
+        logging.error(f"An error occurred during navigation to About page: {str(e)}")
