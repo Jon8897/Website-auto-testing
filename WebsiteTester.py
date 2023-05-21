@@ -3,6 +3,7 @@ import traceback
 from selenium import webdriver
 import pytest
 import logging
+from urllib.parse import urlparse
 
 # Define a fixture that sets up and tears down the WebDriver
 @pytest.fixture
@@ -20,6 +21,18 @@ logging.basicConfig(filename='website-improvements.log', level=logging.INFO,
 
 # Define the test case that uses the WebDriver fixture
 def test_website(browser, url, title):
+    # Check if URL and Title fields are empty
+    if not url:
+        raise ValueError("Please enter a URL")
+
+    if not title:
+        raise ValueError("Please enter a title")
+
+    # Check if the URL has a valid format
+    parsed_url = urlparse(url)
+    if not parsed_url.scheme or not parsed_url.netloc:
+        raise ValueError("Invalid URL format")
+
     # Navigate to the specified website
     browser.get(url)
 
@@ -30,6 +43,7 @@ def test_website(browser, url, title):
     try:
         # Check if the title of the page contains the expected text
         assert title in browser.title
+        logging.info("Website test passed!")
     except AssertionError:
         # Log the error message to the file
         logging.error(f"'{title}' not found in the title of {url}")
