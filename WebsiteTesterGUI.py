@@ -36,6 +36,22 @@ class WebsiteTesterGUI:
         # Create a browser instance
         self.browser = None
 
+    def test_website(self):
+        # Get the URL and Title entered by the user
+        url = self.url_entry.get()
+        title = self.title_entry.get()
+
+        # Call the function from WebsiteTester.py
+        WebsiteTester.test_website(self.browser, url, title)
+
+    def navigate_home(self):
+        # Call the function from WebsiteTester.py
+        WebsiteTester.navigate_home(self.url_entry, self.title_entry)
+
+    def navigate_about(self):
+        # Call the function from WebsiteTester.py
+        WebsiteTester.navigate_about(self.url_entry, self.title_entry)
+
     def __del__(self):
         # Close the browser when the GUI is closed
         if self.browser:
